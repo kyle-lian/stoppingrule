@@ -2,6 +2,7 @@
 
 S3method(lines,rule)
 S3method(plot,rule)
+S3method(plot,rule.s)
 S3method(print,rule)
 export(OC.rule)
 export(calc.bnd.s)

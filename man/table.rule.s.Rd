@@ -7,7 +7,7 @@
 table.rule.s(rule)
 }
 \arguments{
-\item{rule}{A rule object calculated by 'calc.rule.s' function}
+\item{rule}{A rule object calculated by \code{calc.rule.s} function}
 }
 \value{
 A matrix with two columns: total follow up time and their corresponding rejection boundary.

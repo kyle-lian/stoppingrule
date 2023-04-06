@@ -1,7 +1,7 @@
 #' @title Tabulate Stopping Rule (Survival data)
 #' @description Summarize a stoping rule in a condensed tabular format
 #'
-#' @param rule A rule object calculated by 'calc.rule.s' function
+#' @param rule A rule object calculated by \code{calc.rule.s} function
 #'
 #' @return A matrix with two columns: total follow up time and their corresponding rejection boundary.
 #' @export

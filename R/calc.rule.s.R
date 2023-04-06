@@ -23,5 +23,7 @@ calc.rule.s <- function(n, tau, p0, type, param=NULL, alpha){
   stage.stop.prob <- stopping.prob(bnd = bdry, p = p0)$stage.stop.prob
   val <- cbind(floor(bdry$ud), bdry$S)
   colnames(val) <- c("Total follow up time","Reject bdry")
-  return(list(Rule = val, tau = tau, cval = cval, stage.stop.prob = stage.stop.prob))
+  val2 <- list(Rule = val, tau = tau, cval = cval, stage.stop.prob = stage.stop.prob)
+  class(val2) <- "rule.s"
+  return(val2)
 }

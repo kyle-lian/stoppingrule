@@ -2,7 +2,7 @@
 % Please edit documentation in R/calc.bnd.s.R
 \name{calc.bnd.s}
 \alias{calc.bnd.s}
-\title{Stopping Boundary Calculation for survival data}
+\title{Stopping Boundary Calculation (Survival Data)}
 \usage{
 calc.bnd.s(n, tau, p0, cval, type, param = NULL)
 }

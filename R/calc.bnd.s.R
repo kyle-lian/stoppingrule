@@ -1,4 +1,4 @@
-#' @title Stopping Boundary Calculation for survival data
+#' @title Stopping Boundary Calculation (Survival Data)
 #' @description
 #' Internal workhorse function to calculate stopping boundary for a given method
 #' @param n Maximum sample size for safety monitoring

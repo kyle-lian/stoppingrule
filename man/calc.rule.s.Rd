@@ -2,7 +2,7 @@
 % Please edit documentation in R/calc.rule.s.R
 \name{calc.rule.s}
 \alias{calc.rule.s}
-\title{Calculate a stopping rule for safety monitoring (Survival data)}
+\title{Stopping Rule Calculation (Survival Data)}
 \usage{
 calc.rule.s(n, tau, p0, type, param = NULL, alpha)
 }
@@ -23,7 +23,7 @@ calc.rule.s(n, tau, p0, type, param = NULL, alpha)
 A list of four: 1. A matrix with two columns: total follow up time and their corresponding rejection boundary. 2. value tau to be stored for later use. 3. The calibration constant value used for calculation. 4. Stopping probability at each stage.
 }
 \description{
-Calculate a stopping rule for safety monitoring (Survival data)
+Calculate a stopping rule for safety monitoring
 }
 \examples{
 \dontrun{

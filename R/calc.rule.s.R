@@ -1,4 +1,6 @@
-#' @title Calculate a stopping rule for safety monitoring (Survival data)
+#' @title Stopping Rule Calculation (Survival Data)
+#' @description
+#'  Calculate a stopping rule for safety monitoring
 #'
 #' @param n Maximum sample size for safety monitoring
 #' @param tau Observation period

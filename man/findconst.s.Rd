@@ -2,7 +2,7 @@
 % Please edit documentation in R/findconst.s.R
 \name{findconst.s}
 \alias{findconst.s}
-\title{Internal workhorse function to calculate the calibration constant value that attains level alpha for given method (Survival data)}
+\title{Search for Calibration Value (Survival Data)}
 \usage{
 findconst.s(n, tau, p0, type, alpha, param = NULL)
 }
@@ -23,7 +23,7 @@ findconst.s(n, tau, p0, type, alpha, param = NULL)
 The calibration constant used for subsequent stopping boundary calculation
 }
 \description{
-Internal workhorse function to calculate the calibration constant value that attains level alpha for given method (Survival data)
+Internal workhorse function to calculate the calibration constant value that attains level alpha for given method
 }
 \examples{
 \dontrun{

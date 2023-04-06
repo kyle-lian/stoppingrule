@@ -1,4 +1,6 @@
-#' @title Internal workhorse function to calculate the calibration constant value that attains level alpha for given method (Survival data)
+#' @title Search for Calibration Value (Survival Data)
+#' @description
+#' Internal workhorse function to calculate the calibration constant value that attains level alpha for given method
 #'
 #' @param n Maximum sample size for safety monitoring
 #' @param tau Observation period

@@ -1,4 +1,4 @@
-#' @title Operating Characteristics Function
+#' @title Operating Characteristics Function (Survival Data)
 #' @description
 #' Compute operating characteristics for a stopping rule at a set of toxicity rates.
 #' Characteristics calculated include the overall rejection probability, the expected

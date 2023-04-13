@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot.rule.s.R
 \name{plot.rule.s}
 \alias{plot.rule.s}
-\title{Plot Stopping Rule}
+\title{Plot Stopping Rule (Survival Data)}
 \usage{
 \method{plot}{rule.s}(x, ...)
 }
@@ -17,6 +17,6 @@ Display a stopping rule graphically as a curve.
 \examples{
 \dontrun{
 pocock.rule <- calc.rule.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
-plot.rule.s(pocock.rule, col = "red")
+plot(pocock.rule, col = "red")
 }
 }

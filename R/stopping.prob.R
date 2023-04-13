@@ -1,6 +1,6 @@
-#' @title Calculating the stopping probability given a rejection boundary
+#' @title Calculating the stopping probability given a rejection boundary (Survival Data)
 #'
-#' @param bnd A 'bnd' object
+#' @param bnd A 'bnd' object calculated by \code{calc.bnd.s} function
 #' @param p True toxicity rate
 #'
 #' @return A list of three: stopping probabilities at each stage, total stopping probability, and non-stopping probabilities of each possible number of events at the last stage.

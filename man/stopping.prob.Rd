@@ -2,12 +2,12 @@
 % Please edit documentation in R/stopping.prob.R
 \name{stopping.prob}
 \alias{stopping.prob}
-\title{Calculating the stopping probability given a rejection boundary}
+\title{Calculating the stopping probability given a rejection boundary (Survival Data)}
 \usage{
 stopping.prob(bnd, p)
 }
 \arguments{
-\item{bnd}{A 'bnd' object}
+\item{bnd}{A 'bnd' object calculated by \code{calc.bnd.s} function}
 
 \item{p}{True toxicity rate}
 }
@@ -15,7 +15,7 @@ stopping.prob(bnd, p)
 A list of three: stopping probabilities at each stage, total stopping probability, and non-stopping probabilities of each possible number of events at the last stage.
 }
 \description{
-Calculating the stopping probability given a rejection boundary
+Calculating the stopping probability given a rejection boundary (Survival Data)
 }
 \examples{
 \dontrun{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/OC.rule.s.R
 \name{OC.rule.s}
 \alias{OC.rule.s}
-\title{Operating Characteristics Function}
+\title{Operating Characteristics Function (Survival Data)}
 \usage{
 OC.rule.s(rule, ps)
 }

@@ -1,6 +1,6 @@
 #' @title Search for Calibration Value (Survival Data)
 #' @description
-#' Internal workhorse function to calculate the calibration constant value that attains level alpha for given method
+#' Internal workhorse function to calculate the calibration constant value that attains level alpha for given method for time-to-event data
 #'
 #' @param n Maximum sample size for safety monitoring
 #' @param tau Observation period
@@ -10,13 +10,9 @@
 #' @param param Extra parameter(s) needed for certain stopping rule methods. For Wang-Tsiatis test, this is the Delta parameter. For modified SPRT, this is the targeted alternative toxicity rate p1. For Bayeian Gamma-Poisson model, this is the pair of hyperparameters for the gamma prior on the toxicity rate.
 #'
 #' @return The calibration constant used for subsequent stopping boundary calculation
-#' @export
 #'
-#' @examples
-#' \dontrun{
-#' findconst.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
-#' findconst.s(n = 30, tau = 100, p0 = 0.1, type = "Bayesian", alpha = 0.05, param = c(1.05,1000))
-#' }
+#'
+#'
 findconst.s <- function(n, tau, p0, type, alpha, param = NULL){
 
   inner <- function(n, tau, p0, type, cval, param){

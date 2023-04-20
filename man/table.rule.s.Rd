@@ -7,17 +7,16 @@
 table.rule.s(rule)
 }
 \arguments{
-\item{rule}{A rule object calculated by \code{calc.rule.s} function}
+\item{rule}{A 'rule.s' object calculated by \code{calc.rule.s()} function}
 }
 \value{
 A matrix with two columns: total follow up time and their corresponding rejection boundary.
 }
 \description{
-Summarize a stoping rule in a condensed tabular format
+Summarize a stopping rule in a condensed tabular format
 }
 \examples{
-\dontrun{
 pocock.rule <- calc.rule.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
 table.rule.s(pocock.rule)
-}
+
 }

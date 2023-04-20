@@ -2,10 +2,10 @@
 #' @description
 #' Compute operating characteristics for a stopping rule at a set of toxicity rates.
 #' Characteristics calculated include the overall rejection probability, the expected
-#' number of patients evaluated, and the expected number of events.
+#' number of patients evaluated, and the expected number of events for time-to-event data
 #'
 #'
-#' @param rule A rule object calculated by \code{calc.rule.s} function
+#' @param rule A 'rule.s' object calculated by \code{calc.rule.s()} function
 #' @param ps A vector of toxicity rates at which the operating characteristics will be computed
 #'
 #' @return A matrix with four columns: the toxicity rate \code{ps}, the corresponding
@@ -14,10 +14,9 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' pocock.rule <- calc.rule.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
 #' OC.rule.s(rule = pocock.rule, ps = seq(0.1, 0.5, 0.1))
-#' }
+#'
 OC.rule.s <- function(rule, ps){
   tab = matrix(0, nrow = length(ps), ncol = 4)
   for (i in 1:length(ps)){

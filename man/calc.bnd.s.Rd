@@ -23,11 +23,5 @@ calc.bnd.s(n, tau, p0, cval, type, param = NULL)
 A list of three: tau, number of events that can trigger a stop, and the corresponding total follow up time.
 }
 \description{
-Internal workhorse function to calculate stopping boundary for a given method
-}
-\examples{
-\dontrun{
-calc.bnd.s(n = 30, tau = 100, p0 = 0.1, cval = 4.7, type = "Pocock")
-calc.bnd.s(n = 30, tau = 100, p0 = 0.1, cval = 3, type = "SPRT", param = 0.3)
-}
+Internal workhorse function to calculate stopping boundary for a given method for time-to-event data
 }

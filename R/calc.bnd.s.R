@@ -1,6 +1,6 @@
 #' @title Stopping Boundary Calculation (Survival Data)
 #' @description
-#' Internal workhorse function to calculate stopping boundary for a given method
+#' Internal workhorse function to calculate stopping boundary for a given method for time-to-event data
 #' @param n Maximum sample size for safety monitoring
 #' @param tau Observation period
 #' @param p0 The toxicity rate under the null hypothesis
@@ -10,12 +10,7 @@
 #'
 #' @import pracma
 #' @return A list of three: tau, number of events that can trigger a stop, and the corresponding total follow up time.
-#' @export
-#' @examples
-#' \dontrun{
-#' calc.bnd.s(n = 30, tau = 100, p0 = 0.1, cval = 4.7, type = "Pocock")
-#' calc.bnd.s(n = 30, tau = 100, p0 = 0.1, cval = 3, type = "SPRT", param = 0.3)
-#' }
+#'
 #
 
 calc.bnd.s <- function(n, tau, p0, cval, type, param = NULL){

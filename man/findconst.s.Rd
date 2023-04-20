@@ -23,11 +23,5 @@ findconst.s(n, tau, p0, type, alpha, param = NULL)
 The calibration constant used for subsequent stopping boundary calculation
 }
 \description{
-Internal workhorse function to calculate the calibration constant value that attains level alpha for given method
-}
-\examples{
-\dontrun{
-findconst.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
-findconst.s(n = 30, tau = 100, p0 = 0.1, type = "Bayesian", alpha = 0.05, param = c(1.05,1000))
-}
+Internal workhorse function to calculate the calibration constant value that attains level alpha for given method for time-to-event data
 }

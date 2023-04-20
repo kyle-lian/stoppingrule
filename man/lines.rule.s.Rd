@@ -7,20 +7,13 @@
 \method{lines}{rule.s}(x, ...)
 }
 \arguments{
-\item{x}{A rule object calculated by \code{calc.rule.s} function}
+\item{x}{A 'rule.s' object calculated by \code{calc.rule.s()} function}
 
-\item{...}{Other options to be passed to generic \code{lines} function}
+\item{...}{Other options to be passed to generic \code{lines()} function}
 }
 \value{
 No return value, function solely modifies current plot
 }
 \description{
-Add Stopping Rule Curve to Current Plot (Survival Data)
-}
-\examples{
-\dontrun{
-pocock.rule <- calc.rule.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
-OBF.rule <- calc.rule.s(n = 30, tau = 100, p0 = 0.1, type = "OBF", alpha = 0.05)
-}
-
+Add a stopping rule graphically as a curve on current plot for time-to-event data
 }

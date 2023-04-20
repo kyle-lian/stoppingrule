@@ -11,9 +11,11 @@ calc.rule.s(n, tau, p0, type, param = NULL, alpha)
 
 \item{tau}{Observation period}
 
-\item{p0}{The toxicity rate under the null hypothesis}
+\item{p0}{The toxicity rate under the null hypothesis assumed to occur by \code{tau}}
 
-\item{type}{The method used for constructing the stopping rule}
+\item{type}{The method used for constructing the stopping rule. Choices including a Pocock test ("Pocock"),
+a O'Brein-Fleming test ("OBF"), a Wang-Tsiatis test ("WT"), the Beyesian Gamma-Poisson method ("Bayesian"),
+a modified sequential probability ratio test ("SPRT"), and a maximized SPRT ("MaxSPRT")}
 
 \item{param}{Extra parameter(s) needed for certain stopping rule methods. For Wang-Tsiatis test, this is the Delta parameter. For modified SPRT, this is the targeted alternative toxicity rate p1. For Bayeian Gamma-Poisson model, this is the pair of hyperparameters for the gamma prior on the toxicity rate.}
 
@@ -23,10 +25,9 @@ calc.rule.s(n, tau, p0, type, param = NULL, alpha)
 A list of four: 1. A matrix with two columns: total follow up time and their corresponding rejection boundary. 2. value tau to be stored for later use. 3. The calibration constant value used for calculation. 4. Stopping probability at each stage.
 }
 \description{
-Calculate a stopping rule for safety monitoring
+Calculate a stopping rule for safety monitoring for time-to-event data
 }
 \examples{
-\dontrun{
 calc.rule.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
-}
+
 }

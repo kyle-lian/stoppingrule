@@ -7,16 +7,15 @@
 \method{plot}{rule.s}(x, ...)
 }
 \arguments{
-\item{x}{A rule object calculated by \code{calc.rule.s} function}
+\item{x}{A 'rule.s' object calculated by \code{calc.rule.s()} function}
 
 \item{...}{Other parameters passed to the \code{plot} function.}
 }
 \description{
-Display a stopping rule graphically as a curve.
+Display a stopping rule graphically as a curve for time-to-event data
 }
 \examples{
-\dontrun{
 pocock.rule <- calc.rule.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
 plot(pocock.rule, col = "red")
-}
+
 }

@@ -1,11 +1,13 @@
 #' @title Stopping Rule Calculation (Survival Data)
 #' @description
-#'  Calculate a stopping rule for safety monitoring
+#'  Calculate a stopping rule for safety monitoring for time-to-event data
 #'
 #' @param n Maximum sample size for safety monitoring
 #' @param tau Observation period
-#' @param p0 The toxicity rate under the null hypothesis
-#' @param type The method used for constructing the stopping rule
+#' @param p0 The toxicity rate under the null hypothesis assumed to occur by \code{tau}
+#' @param type The method used for constructing the stopping rule. Choices including a Pocock test ("Pocock"),
+#' a O'Brein-Fleming test ("OBF"), a Wang-Tsiatis test ("WT"), the Beyesian Gamma-Poisson method ("Bayesian"),
+#' a modified sequential probability ratio test ("SPRT"), and a maximized SPRT ("MaxSPRT")
 #' @param param Extra parameter(s) needed for certain stopping rule methods. For Wang-Tsiatis test, this is the Delta parameter. For modified SPRT, this is the targeted alternative toxicity rate p1. For Bayeian Gamma-Poisson model, this is the pair of hyperparameters for the gamma prior on the toxicity rate.
 #' @param alpha The desired type I error/false positive rate for the stopping rule
 #'
@@ -13,9 +15,8 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' calc.rule.s(n = 30, tau = 100, p0 = 0.1, type = "Pocock", alpha = 0.05)
-#' }
+#'
 calc.rule.s <- function(n, tau, p0, type, param=NULL, alpha){
   cval <- findconst.s(n = n, tau = tau, p0 = p0, type = type, param = param, alpha = alpha)
 
@@ -24,6 +25,5 @@ calc.rule.s <- function(n, tau, p0, type, param=NULL, alpha){
   val <- cbind(floor(bdry$ud), bdry$S)
   colnames(val) <- c("Total follow up time","Reject bdry")
   val2 <- list(Rule = val, tau = tau, cval = cval, stage.stop.prob = stage.stop.prob)
-  class(val2) <- "rule.s"
-  return(val2)
+  return(structure(val2, class = "rule.s"))
 }

@@ -1,16 +1,14 @@
 #' @title Calculating the stopping probability given a rejection boundary (Survival Data)
+#' @description
+#' Internal workhouse function to calculate the stopping probability given a rejection boundary for time-to-event data
 #'
 #' @param bnd A 'bnd' object calculated by \code{calc.bnd.s} function
 #' @param p True toxicity rate
 #'
 #' @return A list of three: stopping probabilities at each stage, total stopping probability, and non-stopping probabilities of each possible number of events at the last stage.
-#' @examples
-#' \dontrun{
-#' pocock.bnd <- calc.bnd.s(n = 30, tau = 100, p0 = 0.1, cval = 4.7, type = "Pocock")
-#' stopping.prob(bnd = pocock.bnd, p = 0.1)
-#' }
 #'
-#' @export
+#'
+
 stopping.prob <- function(bnd, p){
   tau <- bnd$tau
   lambda <- -log(1 - p)/tau

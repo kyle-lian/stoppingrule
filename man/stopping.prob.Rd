@@ -15,12 +15,5 @@ stopping.prob(bnd, p)
 A list of three: stopping probabilities at each stage, total stopping probability, and non-stopping probabilities of each possible number of events at the last stage.
 }
 \description{
-Calculating the stopping probability given a rejection boundary (Survival Data)
-}
-\examples{
-\dontrun{
-pocock.bnd <- calc.bnd.s(n = 30, tau = 100, p0 = 0.1, cval = 4.7, type = "Pocock")
-stopping.prob(bnd = pocock.bnd, p = 0.1)
-}
-
+Internal workhouse function to calculate the stopping probability given a rejection boundary for time-to-event data
 }

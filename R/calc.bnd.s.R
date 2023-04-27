@@ -42,8 +42,8 @@ calc.bnd.s <- function(n, tau, p0, cval, type, param = NULL){
     f <- function(U){
       lambda0*U + W*sqrt(lambda0)*Umax^(0.5 - Delta)*U^Delta
     }
-    f.inverse <- function(d, lower = 0, upper = 2*n*tau){
-      uniroot(function(u){f(u) - d}, lower = lower, upper = upper)$root
+    f.inverse <- function(D){
+      uniroot(function(u){f(u) - D}, lower = 0, upper = 2*n*tau)$root
     }
   }
 
